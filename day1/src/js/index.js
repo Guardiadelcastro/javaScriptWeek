@@ -1,39 +1,41 @@
 /*** index.js ***/
 var history = [];
+var dom = {
+  button1: document.querySelector('#button1'),
+  button2: document.querySelector('#button2'),
+  button3: document.querySelector('#button3'),
+  number1: document.querySelector('#number1'),
+  number2: document.querySelector('#number2'),
+  number3: document.querySelector('#number3'),
+};
 
-var button1 = document.getElementById('button1');
-button1.onclick = function randomNum() {
+dom.button1.onclick = function randomNum() {
   var result = Math.floor(Math.random() * 6 + 1); 
   console.log(result);
   if (result === 7){
     result = 6;
   }
   history.push(result);
-  var diceNum = document.getElementById('number1');
-  diceNum.textContent = result;
+  dom.number1.textContent = result;
   var results1 = document.getElementById('results1');
   results1.textContent = history;
 };
 
-var button2 = document.getElementById('button2');
-button2.onclick = function randomNum() {
+dom.button2.onclick = function randomNum() {
   var result = Math.floor(Math.random() * 6 + 1); 
   console.log(result);
   if (result === 7){
     result = 6;
   }
-  var diceNum = document.getElementById('number2');
-  diceNum.textContent = result;
+  dom.number2.textContent = result;
 };
 
-var button3 = document.getElementById('button3');
-button3.onclick = function randomNum() {
+dom.button3.onclick = function randomNum() {
   var result = Math.floor(Math.random() * 6 + 1); 
   console.log(result);
   if (result === 7){
     result = 6;
   }
-  var diceNum = document.getElementById('number3');
-  diceNum.textContent = result;
+  dom.number3.textContent = result;
 };
 

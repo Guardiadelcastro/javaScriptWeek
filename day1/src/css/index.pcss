@@ -1,23 +1,25 @@
-/*** index.postcss ***/
+/*** index.pcss ***/
 body {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: grey;
+  background-color: ghostwhite;
   width: 100vw;
   height: 100vh;
 }
 
 .container {
-  background: white;
+  background: lightyellow;
+  border-radius: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   padding: 50px;
   width: auto;
+  box-shadow: 0 0 8px grey;
 }
 
 .slot {
@@ -52,10 +54,10 @@ body {
   border-radius: 10px;
   outline: none;
   border: none;
-  transform-origin: ease;
+  transition: all 1s ease;
 }
 
-button:active {
+.button:hover {
   background: white;
   color: lightcoral;
   border: 1px solid lightcoral;
