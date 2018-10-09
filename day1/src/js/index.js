@@ -6,13 +6,13 @@ button1.onclick = function randomNum() {
   if (result === 7){
     result = 6;
   }
+  history.push(result);
   var diceNum = document.getElementById('number1');
   diceNum.textContent = result;
   
   var results = [];
   var results1 = document.getElementById('results1');
-  results1.push(result);
-  results1.textContent = results;
+  results1.textContent = history;
 };
 
 var button2 = document.getElementById('button2');
