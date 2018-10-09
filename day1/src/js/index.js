@@ -1,4 +1,6 @@
 /*** index.js ***/
+var history = [];
+
 var button1 = document.getElementById('button1');
 button1.onclick = function randomNum() {
   var result = Math.floor(Math.random() * 6 + 1); 
@@ -9,8 +11,6 @@ button1.onclick = function randomNum() {
   history.push(result);
   var diceNum = document.getElementById('number1');
   diceNum.textContent = result;
-  
-  var results = [];
   var results1 = document.getElementById('results1');
   results1.textContent = history;
 };
